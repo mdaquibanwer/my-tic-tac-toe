@@ -40,14 +40,19 @@ const checkWinner = ()=>{
 
 // reset the game 
 resetbtn.addEventListener('click',()=>{
+    let boxtext = document.querySelectorAll('.boxtext')
+    Array.from(boxtext).forEach(element=>{
+        element.innerText = ""
+    })
     if(gameOver.play()){
         gameOver.pause();
         resetGame.play();
         document.querySelector(".imgbox").getElementsByTagName('img')[0].style.width = "0px"
-        let boxtext = document.getElementsByClassName('boxtext');
-        boxtext.innerText === "";
-
     }
+    gameTurn = "X";
+    gameWon =false;
+    document.getElementsByClassName("info")[0].innerText = "Turn For " + gameTurn;
+    
 })
 
 
