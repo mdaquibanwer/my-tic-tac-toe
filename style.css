@@ -18,7 +18,7 @@ nav ul li{
 
 .gameContainer{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 1rem;
 }
 .box{
@@ -40,9 +40,36 @@ nav ul li{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0 32px;
 }
+.gameinfo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.gameinfo h1{
+    margin-bottom: 10px;
+}
 .imgbox img{
-    height: 150px;
-    display: none;
+    height: 250px;
+    width: 0px;
+    transition: width 0.2s ease-in;
+}
+.info{
+    font-size: 30px;
+}
+
+#reset {
+    cursor: pointer;
+    margin: 10px 32px;
+    width: 80px;
+    height: 40px;
+    background-color: #efeffe;
+    border-radius: 5px;
+    border: 2px solid #dedede;
+    font-size: 16px;
+}
+
+#reset:hover{
+    background-color: #d6dfda;
+    border: 2px solid #bcbcbc;
+    transition: all 0.5s ease-in-out;
 }
 
 
