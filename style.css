@@ -39,6 +39,7 @@ nav ul li{
     grid-template-rows: repeat(3,10vw);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0 32px;
+    position: relative;
 }
 .gameinfo{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -72,7 +73,13 @@ nav ul li{
     transition: all 0.5s ease-in-out;
 }
 
-
+.line{
+    background-color: #000;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    transition: width 0.5s ease-in-out;
+}
 
 
 
@@ -90,4 +97,29 @@ nav ul li{
 }
 .bb-0{
     border-bottom: none;
+}
+
+
+
+/* *************************** MEDIA QUERIES **************************************** */
+
+@media (max-width:1000px){
+    .gameContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .gameplay{
+        margin: 3rem 0rem 5rem 0rem;
+    }
+    .gameinfo{
+        
+        padding: 0rem 1rem;
+    }
+    .gameinfo h1{
+        font-size: 1.5rem;
+    }
+    .gameplay{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
 }
